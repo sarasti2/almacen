@@ -1,0 +1,36 @@
+server:
+  port: 8080  # Puerto donde se ejecutará tu aplicación
+
+spring:
+  datasource:
+    url: jdbc:postgresql://localhost:5432/warehouse_db  # Conexión a la base de datos PostgreSQL (definida en docker-compose.yml)
+    username: postgres  # Usuario de la base de datos
+    password: pass  # Contraseña de la base de datos
+    driver-class-name: org.postgresql.Driver  # Driver JDBC para PostgreSQL
+  jpa:
+    hibernate:
+      ddl-auto: update  # Actualiza automáticamente el esquema de la base de datos (útil en desarrollo)
+    database-platform: org.hibernate.dialect.PostgreSQLDialect  # Dialecto de Hibernate para PostgreSQL
+    show-sql: true  # Muestra las consultas SQL en los logs
+    properties:
+      hibernate.format_sql: true  # Formatea las consultas SQL en los logs
+
+logging:
+  level:
+    org.hibernate.SQL: DEBUG  # Habilita logs detallados de consultas SQL
+    org.springframework.web: DEBUG  # Habilita logs para solicitudes web
+
+springdoc:
+  api-docs:
+    path: /v3/api-docs  # Path para la generación de la documentación OpenAPI
+  swagger-ui:
+    path: /swagger-ui.html  # URL para acceder al Swagger UI
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"  # Expone todos los endpoints de Spring Boot Actuator (opcional para depuración)
+
+hateoas:
+  use-hal-as-default-json-media-type: true  # Habilita HAL para HATEOAS en formato JSON
