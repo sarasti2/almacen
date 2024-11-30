@@ -1,11 +1,11 @@
 server:
-  port: 8080  # Puerto donde se ejecutará tu aplicación
+  port: 8015  # Puerto donde se ejecutará tu aplicación
 
 spring:
   datasource:
     url: jdbc:postgresql://localhost:5432/warehouse_db  # Conexión a la base de datos PostgreSQL (definida en docker-compose.yml)
     username: postgres  # Usuario de la base de datos
-    password: pass  # Contraseña de la base de datos
+    password: sarasti1907  # Contraseña de la base de datos
     driver-class-name: org.postgresql.Driver  # Driver JDBC para PostgreSQL
   jpa:
     hibernate:

@@ -1,0 +1,7 @@
+com\arquitectura\almacen\repository\WarehouseRepository.class
+com\arquitectura\almacen\model\Warehouse.class
+com\arquitectura\almacen\controller\WarehouseController.class
+com\arquitectura\almacen\repository\ProductRepository.class
+com\arquitectura\almacen\model\Product.class
+com\arquitectura\almacen\service\WarehouseService.class
+com\arquitectura\almacen\AlmacenApplication.class
